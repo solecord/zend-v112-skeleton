@@ -5,7 +5,7 @@ class IndexController extends Saffron_AbstractController
 
 	public function indexAction()
 	{
-		$this->view->headTitle('Hello World');
+		$this->view->headTitle('IB Programming Challenge');
 	}
 
 }
