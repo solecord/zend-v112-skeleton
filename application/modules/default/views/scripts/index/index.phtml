@@ -1,74 +1,59 @@
-<div class="container">
-    <div class="row">
+<!-- title & instructions -->
+<h1>IB Programming Challenge</h1>
 
-        <!-- left column -->
-        <div class="col-sm-2">
-            <h3>Menu</h3>
-            <ul class="nav nav-pills nav-stacked">
-                <li role="presentation" class="active"><a href="/">All Questions</a></li>
-                <li role="presentation"><a href="/palindrome">Question 1</a></li>
-                <li role="presentation"><a href="/interface">Question 2</a></li>
-                <li role="presentation"><a href="/missingletter">Question 3</a></li>
-                <li role="presentation"><a href="/fizzbuzz">Question 4</a></li>
-                <li role="presentation"><a href="/shortestword">Question 5</a></li>
-                <li role="presentation"><a href="/uniquenumber">Question 6</a></li>
-            </ul>
-        </div>
+<p>
+    Welcome to the IB Programming Challenge! Your task is to complete as many of the questions below in the
+    allotted time as you can.
+</p>
 
-        <!-- main column -->
-        <div class="col-sm-9">
+<p>
+    For each question you should create a separate controller and view to contain all of your code
+    necessary to answer the question. The view should output the answer of your code. There are URL's
+    already defined in the left side menu. Your controllers should utilize these links to display your
+    answers.
+</p>
 
-            <!-- title & instructions -->
-            <h1>IB Programming Challenge</h1>
+<p>
+    Eg. Question 1 links to a URL of <em>/palindrome</em>, so your created controller should reflect that.
+</p>
 
-            <p>
-                Welcome to the IB Programming Challenge! Your task is to complete as many of the questions below in the
-                allotted time as you can.
-            </p>
+<p>
+    Any website errors will get logged in <em>data/logs/error.log</em>!
+</p>
 
-            <p>
-                For each question you should create a separate controller and view to contain all of your code
-                necessary to answer the question. The view should output the answer of your code. There are URL's
-                already defined in the left side menu. Your controllers should utilize these links to display your
-                answers.
-            </p>
+<p>If you have any questions regarding any of the tasks, please feel free to ask!</p>
 
-            <p>
-                Eg. Question 1 links to a URL of <em>/palindrome</em>, so your created controller should reflect that.
-            </p>
+<hr>
 
-            <p>
-                Any website errors will get logged in <em>data/logs/error.log</em>!
-            </p>
+<!-- QUESTION 1 -->
+<h3>Question 1 - Palindromes</h3>
 
-            <p>If you have any questions regarding any of the tasks, please feel free to ask!</p>
+<p>
+    A palindrome is a word that reads the same backward or forward (e.g. racecar).
+    Write a function that checks if a given word is a palindrome. Character case should be ignored.
+    For example, isPalindrome("Deleveled") should return true as character case should be ignored,
+    resulting in "deleveled", which is a palindrome since it reads the same backward and forward.
+</p>
 
-            <hr>
-
-            <!-- QUESTION 1 -->
-            <h3>Question 1 - Palindromes</h3>
-            <p>A palindrome is a word that reads the same backward or forward (e.g. racecar).
-                Write a function that checks if a given word is a palindrome. Character case should be ignored.
-                For example, isPalindrome("Deleveled") should return true as character case should be ignored,
-                resulting in "deleveled", which is a palindrome since it reads the same backward and forward.</p>
-
-            <pre>
+<pre>
 public function isPalindrome($word)
 {
     return null;
 }
 
 echo isPalindrome('Deleveled');
-            </pre>
+</pre>
 
-            <hr>
+<hr>
 
-            <!-- QUESTION 2 -->
-            <h3>Question 2 - Interfaces</h3>
+<!-- QUESTION 2 -->
+<h3>Question 2 - Interfaces</h3>
 
-            <p>Implement an <em>AnswerInterface</em> in the code snippet below and get <em>Question</em> to echo "4".</p>
+<p>
+    Implement an <em>AnswerInterface</em> in the code snippet below and get <em>Question</em> to echo "4".
+</p>
 
-            <pre>
+<pre>
 class Question
 {
     public function __construct(AnswerInterface $answer)
@@ -94,66 +79,81 @@ interface AnswerInterface
 
 $answer = new Answer;
 $question = new Question($answer);
-            </pre>
+</pre>
 
-            <hr>
+<hr>
 
-            <!-- QUESTION 3 -->
-            <h3>Question 3 - Find The Missing Letter</h3>
+<!-- QUESTION 3 -->
+<h3>Question 3 - Find The Missing Letter</h3>
 
-            <p>Write a method that takes an array of consecutive (increasing) letters as input and returns the missing letter in the array.</p>
-            <p>You will always get a valid array containing characters in the standard English alphabet, and it will always have one letter missing. The length of the array will always be at least 2. The array will always contain letters and will all be in one case (either upper or lower case).</p>
-            <p>Examples:</p>
-            <ul>
-                <li>['a', 'b', 'c', 'd', 'f'] -> 'e'</li>
-                <li>['O', 'Q', 'R', 'S'] -> 'P'</li>
-            </ul>
+<p>
+    Write a method that takes an array of consecutive (increasing) letters as input and returns the missing letter in
+    the array.
+</p>
+<p>
+    You will always get a valid array containing characters in the standard English alphabet, and it will always have
+    one letter missing. The length of the array will always be at least 2. The array will always contain letters and
+    will all be in one case (either upper or lower case).
+</p>
+<p>
+    Examples:
+</p>
+<ul>
+    <li>['a', 'b', 'c', 'd', 'f'] -> 'e'</li>
+    <li>['O', 'Q', 'R', 'S'] -> 'P'</li>
+</ul>
 
-            <pre>
+<pre>
 function find_missing_letter(array $array): string {
     return '';
 }
-            </pre>
+</pre>
 
-            <hr>
+<hr>
 
-            <!-- QUESTION 4 -->
-            <h3>Question 4 - FizzBuzz</h3>
+<!-- QUESTION 4 -->
+<h3>Question 4 - FizzBuzz</h3>
 
-            <p>Write a function that prints the integers from 1 to 100 (inclusive), but:</p>
-            <ul>
-                <li>for multiples of three, print Fizz (instead of the number)</li>
-                <li>for multiples of five, print Buzz (instead of the number)</li>
-                <li>for multiples of both three and five, print FizzBuzz (instead of the number)</li>
-            </ul>
+<p>
+    Write a function that prints the integers from 1 to 100 (inclusive), but:
+</p>
+<ul>
+    <li>for multiples of three, print Fizz (instead of the number)</li>
+    <li>for multiples of five, print Buzz (instead of the number)</li>
+    <li>for multiples of both three and five, print FizzBuzz (instead of the number)</li>
+</ul>
 
-            <hr>
+<hr>
 
-            <!-- QUESTION 5 -->
-            <h3>Question 5 - Find The Shortest Word</h3>
+<!-- QUESTION 5 -->
+<h3>Question 5 - Find The Shortest Word</h3>
 
-            <p>Give a string of words (separated by spaces), return the length of the shortest word(s).</p>
-            <p>The string will never be empty and you do not need to account for different data types.</p>
-            <p>Examples:</p>
-            <ul>
-                <li>'bitcoin take over the world maybe who knows perhaps' -> 3</li>
-                <li>'turns out random test cases are easier than writing out basic ones' -> 3</li>
-            </ul>
+<p>
+    Give a string of words (separated by spaces), return the length of the shortest word(s).
+</p>
+<p>
+    The string will never be empty and you do not need to account for different data types.
+</p>
+<p>
+    Examples:
+</p>
+<ul>
+    <li>'bitcoin take over the world maybe who knows perhaps' -> 3</li>
+    <li>'turns out random test cases are easier than writing out basic ones' -> 3</li>
+</ul>
 
-            <hr>
+<hr>
 
-            <!-- QUESTION 6 -->
-            <h3>Question 6 - Find The Unique Number</h3>
+<!-- QUESTION 6 -->
+<h3>Question 6 - Find The Unique Number</h3>
 
-            <p>There is an array with some numbers. All numbers are equal except for one. Output the unique number.</p>
-            <p>Examples:</p>
-            <ul>
-                <li>findUniqueNumber([1, 1, 1, 2, 1, 1]) === 1</li>
-                <li>findUniqueNumber([0, 0, 0, 0, 0.55, 0]) === 0.55</li>
-            </ul>
-        </div><!-- /col -->
-
-    </div><!-- /row -->
-</div><!-- /container -->
-
-
+<p>
+    There is an array with some numbers. All numbers are equal except for one. Output the unique number.
+</p>
+<p>
+    Examples:
+</p>
+<ul>
+    <li>findUniqueNumber([1, 1, 1, 2, 1, 1]) === 1</li>
+    <li>findUniqueNumber([0, 0, 0, 0, 0.55, 0]) === 0.55</li>
+</ul>

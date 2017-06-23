@@ -16,8 +16,33 @@
 	</head>
 	<body>
 
-		<?php echo $this->layout()->content; ?>
-		<?php echo $this->inlineScript(); ?>
+        <div class="container">
+            <div class="row">
+
+                <!-- left column -->
+                <div class="col-sm-2">
+                    <h3>Menu</h3>
+                    <ul class="nav nav-pills nav-stacked">
+                        <li role="presentation" class="active"><a href="/">All Questions</a></li>
+                        <li role="presentation"><a href="/palindrome">Question 1</a></li>
+                        <li role="presentation"><a href="/interface">Question 2</a></li>
+                        <li role="presentation"><a href="/missingletter">Question 3</a></li>
+                        <li role="presentation"><a href="/fizzbuzz">Question 4</a></li>
+                        <li role="presentation"><a href="/shortestword">Question 5</a></li>
+                        <li role="presentation"><a href="/uniquenumber">Question 6</a></li>
+                    </ul>
+                </div>
+
+                <!-- main column -->
+                <div class="col-sm-9">
+
+<?php echo $this->layout()->content; ?>
+<?php echo $this->inlineScript(); ?>
+
+                </div><!-- /col -->
+
+            </div><!-- /row -->
+        </div><!-- /container -->
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="js/jquery.min.js"></script>
