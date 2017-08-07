@@ -22,14 +22,15 @@
                 <!-- left column -->
                 <div class="col-sm-2">
                     <h3>Menu</h3>
-                    <ul class="nav nav-pills nav-stacked">
-                        <li role="presentation" class="active"><a href="/">All Questions</a></li>
-                        <li role="presentation"><a href="/palindrome">Question 1</a></li>
-                        <li role="presentation"><a href="/interface">Question 2</a></li>
-                        <li role="presentation"><a href="/missingletter">Question 3</a></li>
+                    <ul id="menu" class="nav nav-pills nav-stacked">
+                        <li role="presentation"><a href="/">All Questions</a></li>
+                        <li role="presentation"><a href="/helloworld">Example 1</a></li>
+                        <li role="presentation"><a href="/uniquenumber">Question 1</a></li>
+                        <li role="presentation"><a href="/missingletter">Question 2</a></li>
+                        <li role="presentation"><a href="/shortestword">Question 3</a></li>
                         <li role="presentation"><a href="/fizzbuzz">Question 4</a></li>
-                        <li role="presentation"><a href="/shortestword">Question 5</a></li>
-                        <li role="presentation"><a href="/uniquenumber">Question 6</a></li>
+                        <li role="presentation"><a href="/palindrome">Question 5</a></li>
+                        <li role="presentation"><a href="/interface">Question 6</a></li>
                     </ul>
                 </div>
 
@@ -48,5 +49,19 @@
         <script src="js/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                var uri = '<?= $this->uri ?>';
+                if (uri) {
+                    $('#menu > li').each(function(){
+                        var link = $(this).find('a');
+                        var href = link.attr('href');
+                        if (href == uri) {
+                            $(this).addClass('active');
+                        }
+                    });
+                }
+            });
+        </script>
 	</body>
 </html>

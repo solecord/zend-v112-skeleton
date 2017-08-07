@@ -1,0 +1,32 @@
+<!-- title & instructions -->
+<h1><?= $this->helloWorld ?></h1>
+
+<p>
+    This is an example of how to set up a new controller. Use the code here as an example of how to use Zend's MVC
+    pattern.
+</p>
+
+<p>
+    All new controllers should be placed in:<br>
+    <em>./application/modules/default/controllers</em>
+</p>
+
+<p>
+    All HTML templates should be placed in:<br>
+    <em>./application/modules/default/views/scripts/&lt;controller-name&gt;/&lt;action-name&gt;.phtml</em>
+</p>
+
+<p>
+    To create a "helper" class that contains functions which can be used in view files, see the file at:<br>
+    <em>./application/modules/default/views/helpers/TestHelper.php</em>
+</p>
+
+<p>
+    Helper classes should be named 'Zend_View_Helper_YourCamelCaseName'. This class should extend
+    Zend_View_Helper_Abstract and should be saved in the above direction as 'YourCamelCaseName.php'. Inside the class,
+    you should have one public function named yourCamelCaseName (note the first character is lower case).
+</p>
+
+<p>
+    The output of our TestHelper helper class is: <?= $this->testHelper() ?>
+</p>

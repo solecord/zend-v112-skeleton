@@ -1,5 +1,5 @@
 <!-- title & instructions -->
-<h1>IB Programming Challenge</h1>
+<h1>IB Programming Challenge <?php echo $this->test ?></h1>
 
 <p>
     Welcome to the IB Programming Challenge! Your task is to complete as many of the questions below in the
@@ -21,12 +21,93 @@
     Any website errors will get logged in <em>data/logs/error.log</em>!
 </p>
 
+<p>
+    See <a href="/helloworld">Hello World</a> for an example of how to create the necessary controllers and views.
+</p>
+
 <p>If you have any questions regarding any of the tasks, please feel free to ask!</p>
 
 <hr>
 
 <!-- QUESTION 1 -->
-<h3>Question 1 - Palindromes</h3>
+<h3>Question 1 - Find The Unique Number</h3>
+
+<p>
+    There is an array with some numbers. All numbers are equal except for one. Output the unique number.
+</p>
+<p>
+    Examples:
+</p>
+<ul>
+    <li>findUniqueNumber([1, 1, 1, 2, 1, 1]) === 1</li>
+    <li>findUniqueNumber([0, 0, 0, 0, 0.55, 0]) === 0.55</li>
+</ul>
+
+<hr>
+
+<!-- QUESTION 2 -->
+<h3>Question 2 - Find The Missing Letter</h3>
+
+<p>
+    Write a method that takes an array of consecutive (increasing) letters as input and returns the missing letter in
+    the array.
+</p>
+<p>
+    You will always get a valid array containing characters in the standard English alphabet, and it will always have
+    one letter missing. The length of the array will always be at least 2. The array will always contain letters and
+    will all be in one case (either upper or lower case).
+</p>
+<p>
+    Examples:
+</p>
+<ul>
+    <li>['a', 'b', 'c', 'd', 'f'] -> 'e'</li>
+    <li>['O', 'Q', 'R', 'S'] -> 'P'</li>
+</ul>
+
+<pre>
+function find_missing_letter(array $array): string {
+    return '';
+}
+</pre>
+
+<hr>
+
+<!-- QUESTION 3 -->
+<h3>Question 3 - Find The Shortest Word</h3>
+
+<p>
+    Give a string of words (separated by spaces), return the length of the shortest word(s).
+</p>
+<p>
+    The string will never be empty and you do not need to account for different data types.
+</p>
+<p>
+    Examples:
+</p>
+<ul>
+    <li>'bitcoin take over the world maybe who knows perhaps' -> 3</li>
+    <li>'turns out random test cases are easier than writing out basic ones' -> 3</li>
+</ul>
+
+<hr>
+
+<!-- QUESTION 4 -->
+<h3>Question 4 - FizzBuzz</h3>
+
+<p>
+    Write a function that prints the integers from 1 to 100 (inclusive), but:
+</p>
+<ul>
+    <li>for multiples of three, print Fizz (instead of the number)</li>
+    <li>for multiples of five, print Buzz (instead of the number)</li>
+    <li>for multiples of both three and five, print FizzBuzz (instead of the number)</li>
+</ul>
+
+<hr>
+
+<!-- QUESTION 5 -->
+<h3>Question 5 - Palindromes</h3>
 
 <p>
     A palindrome is a word that reads the same backward or forward (e.g. racecar).
@@ -46,8 +127,8 @@ echo isPalindrome('Deleveled');
 
 <hr>
 
-<!-- QUESTION 2 -->
-<h3>Question 2 - Interfaces</h3>
+<!-- QUESTION 6 -->
+<h3>Question 6 - Interfaces</h3>
 
 <p>
     Implement an <em>AnswerInterface</em> in the code snippet below and get <em>Question</em> to echo "4".
@@ -80,80 +161,3 @@ interface AnswerInterface
 $answer = new Answer;
 $question = new Question($answer);
 </pre>
-
-<hr>
-
-<!-- QUESTION 3 -->
-<h3>Question 3 - Find The Missing Letter</h3>
-
-<p>
-    Write a method that takes an array of consecutive (increasing) letters as input and returns the missing letter in
-    the array.
-</p>
-<p>
-    You will always get a valid array containing characters in the standard English alphabet, and it will always have
-    one letter missing. The length of the array will always be at least 2. The array will always contain letters and
-    will all be in one case (either upper or lower case).
-</p>
-<p>
-    Examples:
-</p>
-<ul>
-    <li>['a', 'b', 'c', 'd', 'f'] -> 'e'</li>
-    <li>['O', 'Q', 'R', 'S'] -> 'P'</li>
-</ul>
-
-<pre>
-function find_missing_letter(array $array): string {
-    return '';
-}
-</pre>
-
-<hr>
-
-<!-- QUESTION 4 -->
-<h3>Question 4 - FizzBuzz</h3>
-
-<p>
-    Write a function that prints the integers from 1 to 100 (inclusive), but:
-</p>
-<ul>
-    <li>for multiples of three, print Fizz (instead of the number)</li>
-    <li>for multiples of five, print Buzz (instead of the number)</li>
-    <li>for multiples of both three and five, print FizzBuzz (instead of the number)</li>
-</ul>
-
-<hr>
-
-<!-- QUESTION 5 -->
-<h3>Question 5 - Find The Shortest Word</h3>
-
-<p>
-    Give a string of words (separated by spaces), return the length of the shortest word(s).
-</p>
-<p>
-    The string will never be empty and you do not need to account for different data types.
-</p>
-<p>
-    Examples:
-</p>
-<ul>
-    <li>'bitcoin take over the world maybe who knows perhaps' -> 3</li>
-    <li>'turns out random test cases are easier than writing out basic ones' -> 3</li>
-</ul>
-
-<hr>
-
-<!-- QUESTION 6 -->
-<h3>Question 6 - Find The Unique Number</h3>
-
-<p>
-    There is an array with some numbers. All numbers are equal except for one. Output the unique number.
-</p>
-<p>
-    Examples:
-</p>
-<ul>
-    <li>findUniqueNumber([1, 1, 1, 2, 1, 1]) === 1</li>
-    <li>findUniqueNumber([0, 0, 0, 0, 0.55, 0]) === 0.55</li>
-</ul>
